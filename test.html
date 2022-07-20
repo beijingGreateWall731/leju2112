@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="bar"></div>
+  <template id="foo">
+    <p>这是一个模板</p>
+    <p>这是一个模板</p>
+    <p>这是一个模板</p>
+    <p>这是一个模板</p>
+  </template>
+  <!-- <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F4k%2Fs%2F02%2F2109242306111155-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659605969&t=3e62d1ea0a60976bf31bc3a3e26be31a" alt=""> -->
+<script>
+  let [PerformanceNavigationTiming]= window.performance.getEntriesByType('navigation')
+  // console.log(PerformanceNavigationTiming);
+  let performanceResourceTimingEntry = window.performance.getEntriesByType('resource')
+  console.log(performanceResourceTimingEntry);
+
+  let foo = document.querySelector('#foo').content
+  // console.log(foo);
+
+  let barElement = document.querySelector('#bar')
+  barElement.appendChild(foo)
+
+  // let bar = document.querySelector('#bar')
+  // let fragment = document.createDocumentFragment()
+  // fragment.appendChild(document.createElement('p'))
+  // fragment.appendChild(document.createElement('p'))
+  // fragment.appendChild(document.createElement('p'))
+  // console.log("fragment.children.length",fragment.children.length);
+  // bar.appendChild(fragment)
+  // console.log("fragment.children.length",fragment.children.length);
+  // console.log(document.body.innerHTML);
+
+</script>
+</body>
+</html>
